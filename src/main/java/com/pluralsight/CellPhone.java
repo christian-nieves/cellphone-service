@@ -1,6 +1,6 @@
 package com.pluralsight;
 
-public class CellPhone {
+public class CellPhone<phoneNumber> {
     private int serialNumber;
     private String model;
     private String carrier;
@@ -53,5 +53,13 @@ public class CellPhone {
 
     public void setOwner(String owner) {
         this.owner = owner;
+    }
+
+    public void dial(String phoneNumber) {
+        System.out.println(owner + "', phone is calling " + phoneNumber);
+
+
+
+
     }
 }

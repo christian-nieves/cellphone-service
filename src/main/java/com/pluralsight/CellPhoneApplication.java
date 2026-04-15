@@ -28,14 +28,7 @@ public class CellPhoneApplication {
         String owner = scanner.nextLine();
         phone.setOwner(owner);
 
-
-        System.out.println("\nHere is your phone information: ");
-
-        System.out.println(phone.getSerialNumber());
-        System.out.println(phone.getModel());
-        System.out.println(phone.getCarrier());
-        System.out.println(phone.getPhoneNumber());
-        System.out.println(phone.getOwner());
+        System.out.println("===============================");
 
         CellPhone phone2 = new CellPhone();
 
@@ -61,20 +54,15 @@ public class CellPhoneApplication {
         phone2.setOwner(owner2);
 
 
-        System.out.println("\nHere is your phone information: ");
+        phone2.setOwner(owner2);
+        phone2.setModel(phoneModel2);
+        phone2.setCarrier(carrier2);
+        phone2.setPhoneNumber(phoneNum2);
+        phone2.setSerialNumber(serialNum2);
 
-        System.out.println(phone.getSerialNumber());
-        System.out.println(phone.getModel());
-        System.out.println(phone.getCarrier());
-        System.out.println(phone.getPhoneNumber());
-        System.out.println(phone.getOwner());
+        display(phone);
+        display(phone2);
 
-
-        /*phone2.setOwner("Johnathon Doeman");
-        phone2.setModel("iPhone 17 Pro Max");
-        phone2.setCarrier("T-Mobile");
-        phone2.setPhoneNumber("321-654-2828");
-        phone2.setSerialNumber(416712388);*/
 
        phone.dial(phone2.getPhoneNumber());
        phone2.dial(phone.getPhoneNumber());
@@ -89,6 +77,16 @@ public class CellPhoneApplication {
 
 
 
+    }
+
+    public static void display(CellPhone phone){
+        System.out.println("\nHere is your phone information: ");
+
+        System.out.println(phone.getSerialNumber());
+        System.out.println(phone.getModel());
+        System.out.println(phone.getCarrier());
+        System.out.println(phone.getPhoneNumber());
+        System.out.println(phone.getOwner());
     }
 
 }
